@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 | General Routes
 |--------------------------------------------------------------------------
 */
+Route::get('/t',function(){ return view("user.layouts.userSidenav");});
 Route::get("/", [App\Http\Controllers\HomeController::class, "index"])->name("home");
 Route::name("general.")->group(function(){
     Route::get("about", function (){ return view("general.about");})->name("about");

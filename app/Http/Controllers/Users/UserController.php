@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+    public function login()
+    {
+        // return view("user.login");
+    }
+    public function forget_password()
+    {
+        // return view("user.forgetpass");
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +25,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        // return view("user.profile");
     }
 
     /**
@@ -58,8 +68,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {        
+        // return view("user.edit"); 
     }
 
     /**
@@ -71,7 +81,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $inputs = $request->all();
+        // User::find($id)->update($inputs);
     }
 
     /**
@@ -82,6 +93,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // User::find($id)->delete();
     }
 }
